@@ -24,6 +24,28 @@ def find(slovo, spisok: list):              # find(искомое слово, с
     else:
         print(-1)
 
-find(input(), my_list)        
+find(input(), my_list)
 
+##########################################################
+
+
+def list_rand_words(count: int, alp: str = 'xyz'):
+    words_list = []
+    for i in range(count):
+        letters = choices(alp, k=3)
+        words_list.append("".join(letters))
+    return words_list
+
+
+def find_sec(word: str, list_words: list):
+    if list_words.count(word) > 1:
+        index_w = list_words.index(word)
+        print(list_words.index(word, index_w + 1))
+    else:
+        print(-1)
+
+
+all_list = list_rand_words(int(input("Number of words: ")))
+print(all_list)
+find_sec(input("Enter the word: "), all_list)
 
