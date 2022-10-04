@@ -12,7 +12,7 @@ from random import uniform
 def list_rand_nums(count: int):
     list_nums = []
     if count <= 0:
-        print("Negative value of the number of numbers!")
+        print("Отрицательное колличество, исправь! ")
         return [0.0]
 
     for i in range(count):
